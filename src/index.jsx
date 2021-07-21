@@ -15,6 +15,7 @@ import postReducer from './reducers/postReducer';
 // Component
 import PostsIndex from './containers/postIndex';
 import PostShow from './containers/postShow';
+import PostNew from './containers/postNew';
 
 const reducers = combineReducers({
   posts: postReducer
@@ -29,6 +30,7 @@ ReactDOM.render(
       <div className="thin-container">
         <Switch>
           <Route path="/" exact component={PostsIndex} />
+          <Route path="/posts/new" exact component={PostNew} />
           <Route path="/posts/:id" component={PostShow} />
         </Switch>
       </div>
